@@ -1,0 +1,388 @@
+/* =======================
+   ESTILOS GENERALES
+======================= */
+body {
+    background-color: #f8eed0;
+}
+
+.text-center1 {
+    text-align: center; 
+    font-family: 'Righteous', cursive; 
+    font-size: 2.3rem;
+}
+
+.textoNbre {
+    color: #ffffff;
+}
+
+
+/* =======================
+   NAVBAR
+======================= */
+.navbar {
+    transition: background-color 0.3s;
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+    background-color: #212529;
+}
+
+.navbar-brand {
+    display: flex; 
+    align-items: center; 
+    font-family: 'Righteous', cursive; 
+    font-size: 1.5rem;
+    color: #FFCA1A;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+/* Ícono carrito */
+.navbar .fa-shopping-cart {
+    transition: transform 0.2s ease;
+}
+
+.navbar .fa-shopping-cart:hover {
+    transform: scale(1.2);
+}
+
+
+/* =======================
+   OFFCANVAS
+======================= */
+.offcanvas-title {
+    color: #FFCA1A;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-menu {
+    border-top: 1px solid #444;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+
+/* =======================
+   HERO / PORTADA
+======================= */
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.5s ease;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+    font-family: 'Pacifico', cursive; 
+    font-weight: 700;
+    font-size: 5rem;
+    color: orange;
+}
+
+.hero-text p {
+    font-family: 'Montserrat', cursive; 
+    font-weight: 400;
+    font-size: 1.5rem;
+    height: 5px;
+}
+
+
+
+/* =======================
+   MENÚ
+======================= */
+.menu-section {
+    padding: 10px 0;
+    background-color: #f8eed0;
+}
+
+.menu {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.menu:hover {
+    transform: scale(1.05);
+}
+
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.inner_content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+/* =======================
+   BOTONES
+======================= */
+.btn-primary {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: #846D22;
+    color: black;
+    box-shadow: none;
+}
+
+
+/* =======================
+   FOOTER
+======================= */
+.footer-section,
+footer {
+    background-color: #1a1a1a;
+    color: orange;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-section h5,
+footer h5 {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+.footer-section ul,
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a,
+footer a,
+footer p {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover,
+footer a:hover {
+    text-decoration: underline;
+    color: #ffa500;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.payment-methods img {
+    margin-right: 10px;
+}
+
+footer img {
+    filter: brightness(1.2);
+}
+
+footer .fab.fa-facebook-f { color: #1877F2; }
+footer .fab.fa-twitter { color: #1DA1F2; }
+footer .fab.fa-instagram { color: #E4405F; }
+
+footer .fab:hover {
+    opacity: 0.8;
+}
+
+footer hr {
+    border: none;
+    height: 2px;
+    background-color: #ffffff;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+/* =======================
+   LOGO FIJO
+======================= */
+.logo-fijo {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    z-index: 1050;
+    background-color: transparent;
+}
+
+.logo-fijo a {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/* =======================
+   SECCIÓN NOSOTROS
+======================= */
+.nosotros-section {
+    background: linear-gradient(135deg, #ffecd1 5%, #ffca1a 100%);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Righteous', cursive;
+    font-size: 3rem;
+    color: orange;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.nosotros-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nosotros-text {
+    flex: 1 1 400px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 600px;
+    animation: slideUp 1s ease-in-out;
+}
+
+.nosotros-text h3 {
+    font-family: 'Righteous', cursive;
+    font-size: 2rem;
+    color: orange;
+    margin-bottom: 20px;
+}
+
+.nosotros-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.nosotros-image {
+    flex: 1 1 300px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.nosotros-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.nosotros-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Botón de acción */
+.btn-explorar {
+    display: inline-block;
+    background-color: #FF5733;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-explorar:hover {
+    background-color: #d14120;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .nosotros-content {
+        flex-direction: column;
+    }
+
+    .nosotros-text,
+    .nosotros-image {
+        text-align: center;
+    }
+
+    .btn-explorar {
+        width: 100%;
+    }
+}
+
+
