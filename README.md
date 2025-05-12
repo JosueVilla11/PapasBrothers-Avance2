@@ -118,8 +118,9 @@ papas-brothers/
 - Compatible con navegadores modernos
 
 ---
+## 🌐 Vistas del Sistema
 
-## 🔑 Vista Login
+### 🔑 Vista Login
 
 Formulario simple para iniciar sesión:
 
@@ -130,11 +131,11 @@ Formulario simple para iniciar sesión:
 
 ---
 
-## 🏠 Vista Inicio
+### 🏠 Vista Inicio
 
 Diseño principal del sitio con navegación, carrusel de productos, menú destacado y footer informativo.
 
-### Contenido:
+#### Contenido:
 - Navbar con enlaces a Inicio, Menú, Reservaciones y Login
 - Carrusel de imágenes (Broaster, Hamburguesas, Salchipapas)
 - Menú destacado con tarjetas de productos populares
@@ -142,18 +143,18 @@ Diseño principal del sitio con navegación, carrusel de productos, menú destac
 
 ---
 
-## 📞 Vista de Contacto
+### 📞 Vista de Contacto
 
 Formulario para sugerencias, consultas o quejas. Incluye campos como nombre, correo, motivo, descripción, y opción de subir archivos. Integrado con validaciones HTML5 y estilo moderno.
 
-### Características:
+#### Características:
 - Navbar con menú lateral
 - Formulario completo con validación
 - Footer con información legal, de contacto y redes
 
 ---
 
-## 🍽️ Vista Menú
+### 🍽️ Vista Menú
 
 Listado de productos dividido en categorías:
 
@@ -166,29 +167,29 @@ Cada producto tiene:
 - Nombre y precio
 - Botón “Pedir ahora”
 
-### Diseño
+#### Diseño
 - Tarjetas en 4 columnas
 - Navbar y menú lateral
 - Footer completo
 
 ---
 
-## 👥 Vista Nosotros
+### 👥 Vista Nosotros
 
 Sección para presentar la historia de la empresa.
 
-### Contenido:
+#### Contenido:
 - Texto sobre la fundación y propósito de Papas Brothers
 - Imagen del local
 - Botón para ir al menú
 
-### Diseño
+#### Diseño
 - Dos columnas (texto + imagen)
 - Tipografías modernas y estructura responsive
 
 ---
 
-## 📝 Vista de Registro
+### 📝 Vista de Registro
 
 Formulario de registro de usuario:
 
@@ -200,7 +201,7 @@ Formulario de registro de usuario:
 
 ---
 
-## 📧 Contacto
+### 📧 Contacto
 
 **Correo:** contacto@papabrothers.com  
 **Teléfono:** (01) 7137590  
