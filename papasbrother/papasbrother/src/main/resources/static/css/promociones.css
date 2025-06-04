@@ -6,8 +6,8 @@ body {
 }
 
 .text-center1 {
-    text-align: center; 
-    font-family: 'Righteous', cursive; 
+    text-align: center;
+    font-family: 'Righteous', cursive;
     font-size: 2.3rem;
 }
 
@@ -29,9 +29,9 @@ body {
 }
 
 .navbar-brand {
-    display: flex; 
-    align-items: center; 
-    font-family: 'Righteous', cursive; 
+    display: flex;
+    align-items: center;
+    font-family: 'Righteous', cursive;
     font-size: 1.5rem;
     color: #FFCA1A;
 }
@@ -101,14 +101,14 @@ body {
 }
 
 .hero-text h1 {
-    font-family: 'Pacifico', cursive; 
+    font-family: 'Pacifico', cursive;
     font-weight: 700;
     font-size: 5rem;
     color: orange;
 }
 
 .hero-text p {
-    font-family: 'Montserrat', cursive; 
+    font-family: 'Montserrat', cursive;
     font-weight: 400;
     font-size: 1.5rem;
     height: 5px;
@@ -116,71 +116,158 @@ body {
 
 
 
+
 /* =======================
-   MENÚ
+   PROMOCIONES
 ======================= */
-.menu-section {
-    padding: 10px 0;
-    background-color: #f8eed0;
+
+/* ===== PROMOCIONES - VERSIÓN FINAL ===== */
+
+/* Eliminar banner hero */
+.promo-hero {
+    display: none;
 }
 
-.menu {
+/* Sección principal con espaciado correcto */
+.promo-section {
+    padding: 90px 15px 40px;
+    /* Ajuste para navbar fixed */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título centrado */
+.promo-title {
+    font-family: 'Righteous', cursive;
+    font-size: 2.2rem;
+    color: #212529;
+    margin-bottom: 40px;
     text-align: center;
-    padding: 30px;
+    position: relative;
+}
+
+.promo-title::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #FFCA1A;
+}
+
+/* Contenedor de tarjetas */
+.row.g-4 {
+    margin: 0 -10px;
+    /* Compensa el gutter */
+}
+
+/* Tarjetas con proporción correcta */
+.promo-card {
+    background: white;
     border-radius: 10px;
-    color: white;
-    background-size: cover;
-    background-position: center;
-    height: 200px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    margin: 0 10px 30px;
+    /* Espaciado entre tarjetas */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    border: none;
+}
+
+/* Contenedor de imagen con relación 1:1 (cuadrada) */
+.promo-img-container {
+    width: 100%;
+    padding-top: 100%;
+    /* Relación 1:1 */
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s;
 }
 
-.menu:hover {
-    transform: scale(1.05);
-}
-
-.overlay1 {
+.promo-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
-.inner_content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
+.promo-card:hover .promo-img {
+    transform: scale(1.05);
 }
 
+/* Cuerpo de la tarjeta */
+.promo-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
+.promo-body h3 {
+    font-family: 'Righteous', cursive;
+    color: #212529;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
 
-/* =======================
-   BOTONES
-======================= */
-.btn-primary {
-    background-color: orange;
-    color: black;
+.promo-body p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* Precios bien alineados */
+.promo-price {
+    margin-top: auto;
+    /* Empuja hacia abajo */
+    padding-top: 10px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #dc3545;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.discounted-price {
+    color: #28a745;
     font-weight: bold;
-    border: 1px solid black;
+    font-size: 1.3rem;
+    display: inline-block;
 }
 
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus {
-    background-color: #846D22;
-    color: black;
-    box-shadow: none;
+/* Botón de acción */
+.btn-promo {
+    background-color: #FFCA1A;
+    color: #212529;
+    border: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 0.95rem;
 }
+
+.btn-promo:hover {
+    background-color: #e0b000;
+}
+
+.language-container {
+    transition: all 0.3s ease;
+}
+
 
 
 /* =======================
@@ -236,9 +323,17 @@ footer img {
     filter: brightness(1.2);
 }
 
-footer .fab.fa-facebook-f { color: #1877F2; }
-footer .fab.fa-twitter { color: #1DA1F2; }
-footer .fab.fa-instagram { color: #E4405F; }
+footer .fab.fa-facebook-f {
+    color: #1877F2;
+}
+
+footer .fab.fa-twitter {
+    color: #1DA1F2;
+}
+
+footer .fab.fa-instagram {
+    color: #E4405F;
+}
 
 footer .fab:hover {
     opacity: 0.8;
@@ -277,28 +372,51 @@ footer hr {
 
 
 
-
-/* login */
-
-.login-section {
-    background-color: #f8eed0;
+/*  menu */
+body {
     margin-top: 50px;
-}
-s
-.card {
-    background-color: white;
-    border-radius: 15px;
+    position: relative;
+    background-color: #f8eed0;
+    margin: 0;
 }
 
-.btn-dark {
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    z-index: -1;
+}
+
+
+
+/*Diseno de Carta*/
+.tituloComida {
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    margin-top: 30px;
+    color: orange;
     background-color: #212529;
-    border: none;
+    font-size: 80px;
+    text-shadow: 1px 1px 1px 0 #000000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 900px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.btn-dark:hover {
-    background-color: #343a40;
-}
 
+.fixed-menu-img {
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+}
 
 /* =======================
    RESPONSIVO

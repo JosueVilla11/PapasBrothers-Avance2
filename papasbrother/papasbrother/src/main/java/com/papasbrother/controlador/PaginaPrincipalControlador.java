@@ -6,8 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PaginaPrincipalControlador {
     @GetMapping("/")
+    public String mostrarIndex() {
+        return "index"; // Cambia "inicio" por "index"
+    }
+
+    @GetMapping("/inicio")
     public String mostrarInicio() {
-        return "inicio";
+        return "inicio"; // Ahora "inicio" tiene su propia ruta
     }
 
     @GetMapping("/loginn")
@@ -30,4 +35,21 @@ public class PaginaPrincipalControlador {
         return "nosotros"; 
     }
 
+    @GetMapping("/promociones")
+    public String mostrarPromociones() {
+        return "promociones"; 
+    }
+
+    @GetMapping("/terminos")
+    public String mostrarTerminos() {
+        return "terminos"; 
+    }
+
+    @GetMapping("/politicas")
+    public String mostrarPoliticas() {
+        return "politicas"; 
+    }
+
+
 }
+

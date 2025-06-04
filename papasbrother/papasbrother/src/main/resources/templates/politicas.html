@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/politicas.css}">
 </head>
 
 <body>
@@ -62,11 +62,10 @@
                                 <li class="nav-item">
                                     <a class="nav-link" th:href="@{/inicio}">Inicio</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link active" th:href="@{/login}">Iniciar Sesión</a>
-                                </li>
+                                <li class="nav-item"><a class="nav-link" th:href="@{/login}">Iniciar Sesión</a></li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    <a class="nav-link  dropdown-toggle" href="#" role="button"
                                         data-bs-toggle="dropdown">
                                         Menú
                                     </a>
@@ -112,41 +111,111 @@
     </nav>
 
 
+    <!-- Politicas -->
 
-    <!-- Iniciar sesion -->
-    <section class="login-section py-5" style="margin-top: 120px;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-5">
-                    <div class="card shadow-lg p-4 border-0 rounded-4">
-                        <h3 class="text-center mb-4" style="font-family: 'Righteous', cursive; color: orange;">
-                            Iniciar Sesión</h3>
-                        <form method="post" action="/login">
-                            <div class="mb-3">
-                                <label for="username" class="form-label">Usuario</label>
-                                <input type="text" class="form-control" id="username" name="username"
-                                    placeholder="Ingresa tu nombre" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="Ingresa tu contraseña" required>
-                            </div>
-                            <div class="d-grid mb-3">
-                                <button type="submit" class="btn btn-dark">Ingresar</button>
-                            </div>
-                            <div class="text-center">
-                                <span>¿No tienes una cuenta?</span>
-                                <a href="/registro" class="text-decoration-none btn btn-success" style="color: orange;">
-                                    Crear cuenta</a>
-                            </div>
-                        </form>
-                    </div>
+    <main class="faq-container">
+        <h1 class="faq-title">Políticas de Privacidad</h1>
+
+        <section class="faq-category">
+            <h2>Información Recopilada</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Qué tipo de información recopilamos?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Recopilamos datos personales como nombre, correo electrónico, número de teléfono y ubicación
+                        cuando realizas un pedido o contactas nuestro servicio.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo recopilamos esta información?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Recopilamos información a través de formularios en nuestro sitio web, aplicaciones de pago y
+                        cookies para mejorar tu experiencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-category">
+            <h2>Uso de la Información</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo utilizamos la información recopilada?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Usamos tu información para procesar pedidos, mejorar nuestro servicio y enviarte promociones
+                        relevantes.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Compartimos tu información con terceros?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No vendemos ni compartimos tu información personal con terceros. Solo la usamos para mejorar
+                        nuestros servicios y cumplir con regulaciones.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-category">
+            <h2>Protección y Seguridad</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo protegemos tu información?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Implementamos medidas de seguridad como cifrado de datos y accesos restringidos para proteger tu
+                        información personal.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Por cuánto tiempo almacenamos tus datos?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Solo almacenamos tu información mientras sea necesaria para la prestación de servicios o
+                        cumpliendo con regulaciones legales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-category">
+            <h2>Tus Derechos</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo puedes acceder, modificar o eliminar tus datos?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Puedes solicitar acceso, modificación o eliminación de tu información contactándonos a través de
+                        nuestro correo de soporte.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo puedes retirar tu consentimiento?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Si deseas que dejemos de utilizar tus datos, puedes solicitarlo y haremos los ajustes necesarios.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
 
@@ -180,10 +249,8 @@
                 <!-- Legales -->
                 <div class="col-md-2">
                     <h5 class="text-uppercase mb-4">Legales</h5>
-                    <a th:href="@{/politicas}" class="text-white text-decoration-none d-block mb-2">Políticas de
-                        privacidad</a>
-                    <a th:href="@{/terminos}" class="text-white text-decoration-none d-block mb-2">Términos y
-                        condiciones</a>
+                    <a th:href="@{/politicas}" class="text-white text-decoration-none d-block mb-2">Políticas de privacidad</a>
+                    <a th:href="@{/terminos}" class="text-white text-decoration-none d-block mb-2">Términos y condiciones</a>
                 </div>
 
                 <!-- Atención -->
@@ -212,6 +279,8 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/politicas.js}"></script>
+
 </body>
 
 </html>

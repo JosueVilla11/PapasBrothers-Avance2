@@ -18,7 +18,7 @@ public class AutenticacionControlador {
 
     @GetMapping("/login")
     public String mostrarLogin() {
-        return "login";
+        return "login"; // Redirige a la vista de login
     }
 
     @GetMapping("/registro")
@@ -31,13 +31,15 @@ public class AutenticacionControlador {
     public String registrarUsuario(@ModelAttribute Usuario usuario) {
         usuario.setContraseña(passwordEncoder.encode(usuario.getContraseña()));
 
-        Rol rolUsuario = rolRepositorio.findByNombre("ROLE_USER");
+        Rol rolUsuario = rolRepositorio.findByNombre("ROLE_USER");  // Busca si el rol "ROLE_USER" ya existe en la base de datos.
         if (rolUsuario == null) {
             rolUsuario = new Rol();
             rolUsuario.setNombre("ROLE_USER");
             rolRepositorio.save(rolUsuario);
         }
 
+
+        // Asigna el rol al usuario y lo guarda en la base de datos.
         usuario.getRoles().add(rolUsuario);
         usuarioRepositorio.save(usuario);
         return "redirect:/login";
