@@ -28,12 +28,12 @@ public class SeguridadConfig {
         http
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/admin/**").hasRole("ADMIN")
-                .requestMatchers("/registro", "/login", "/", "/css/**", "/js/**", "/img/**", "/videos/**", "/menu", "/contacto", "/nosotros").permitAll()
+                .requestMatchers("/registro", "/login", "/", "/css/**", "/js/**", "/img/**", "/videos/**", "/menu", "/contacto", "/nosotros", "/inicio", "/promociones", "/terminos", "/politicas").permitAll()
                 .anyRequest().authenticated()
             )
             .formLogin(form -> form
                 .loginPage("/login")
-                .successHandler(manejadorDeAutenticacion) // ← usamos el componente aquí
+                .successHandler(manejadorDeAutenticacion) // usamos el componente aquí
                 .permitAll()
             )
             .logout(logout -> logout
@@ -48,13 +48,5 @@ public class SeguridadConfig {
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    }
-
-     
-
-
-   
-
-    
+    }    
 }
-
